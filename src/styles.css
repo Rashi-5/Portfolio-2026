@@ -1,0 +1,227 @@
+:root {
+  --color-bg: #f7f0e6;
+  --color-surface: #efe3d2;
+  --color-text: #241a17;
+  --color-accent: #c93f9e;
+  --color-accent-2: #7c46cc;
+  --color-divider: color-mix(in srgb, #241a17 16%, transparent);
+
+  --color-neutral-100: #faf6ef;
+  --color-neutral-200: #f0e9dd;
+  --color-neutral-300: #e0d4c3;
+  --color-neutral-400: #c7b8a2;
+  --color-neutral-500: #a89880;
+  --color-neutral-600: #8a7a63;
+  --color-neutral-700: #6b5d4a;
+  --color-neutral-800: #4a3f32;
+  --color-neutral-900: #201712;
+
+  --color-accent-100: #fbe7f3;
+  --color-accent-200: #f5c9e4;
+  --color-accent-300: #eb9bd0;
+  --color-accent-400: #dd6ab8;
+  --color-accent-500: #c93f9e;
+  --color-accent-600: #a8237f;
+  --color-accent-700: #841a65;
+  --color-accent-800: #5e1348;
+  --color-accent-900: #3a0c2c;
+
+  --color-accent-2-100: #f0e9fb;
+  --color-accent-2-200: #ddc9f5;
+  --color-accent-2-300: #c39eee;
+  --color-accent-2-400: #a06fe0;
+  --color-accent-2-500: #7c46cc;
+  --color-accent-2-600: #602fa8;
+  --color-accent-2-700: #482382;
+  --color-accent-2-800: #331a5c;
+  --color-accent-2-900: #1f0f38;
+
+  --font-heading: "Cormorant Garamond", system-ui, serif;
+  --font-heading-weight: 600;
+  --font-body: "Lora", system-ui, serif;
+
+  --space-1: 4.6px;
+  --space-2: 9.2px;
+  --space-3: 13.8px;
+  --space-4: 18.4px;
+  --space-6: 27.6px;
+  --space-8: 36.8px;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 7px;
+
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #201712 14%, transparent);
+  --shadow-md: 0 4px 16px color-mix(in srgb, #201712 14%, transparent);
+  --shadow-lg: 0 20px 48px color-mix(in srgb, #201712 20%, transparent);
+
+  --line-w: 3px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 400;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0 0 var(--space-2);
+}
+
+p {
+  margin: 0 0 var(--space-3);
+}
+
+a {
+  color: var(--color-accent-700);
+  text-underline-offset: 3px;
+}
+a:hover {
+  color: var(--color-accent);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus {
+  outline: none;
+}
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+}
+
+/* tags */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  padding: 3px 10px;
+  border-radius: calc(var(--radius-md) * 0.75);
+}
+.tag-accent {
+  background: var(--color-accent-100);
+  color: var(--color-accent-800);
+}
+.tag-accent-2 {
+  background: var(--color-accent-2-100);
+  color: var(--color-accent-2-800);
+}
+.tag-neutral {
+  background: var(--color-neutral-100);
+  color: var(--color-neutral-800);
+}
+.tag-outline {
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: transparent;
+  border: 1px solid var(--color-divider);
+}
+.card-kicker {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+.card-title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: 17px;
+  line-height: 1.2;
+}
+.card-body {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.8;
+  flex: 1;
+}
+.elev-sm {
+  box-shadow: var(--shadow-sm);
+}
+.elev-md {
+  box-shadow: var(--shadow-md);
+}
+.elev-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+/* decorative plate frame around image slots */
+.plate {
+  filter: sepia(0.22) saturate(0.82) contrast(1.05);
+  box-sizing: border-box;
+  border: 6px solid var(--color-surface);
+  outline: 1px solid var(--color-divider);
+}
+
+@keyframes driftGlow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-24px, 18px);
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* image placeholder slots */
+.image-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--color-neutral-200);
+  color: color-mix(in srgb, var(--color-text) 45%, transparent);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  text-align: center;
+  padding: 16px;
+  overflow: hidden;
+}
+.image-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
