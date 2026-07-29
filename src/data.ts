@@ -35,6 +35,9 @@ export interface ResearchCard {
   status: string;
   title: string;
   description: string;
+  /** Image URL — a file in /public, or an imported asset. */
+  src?: string;
+  alt?: string;
 }
 
 export interface Stat {
@@ -46,8 +49,8 @@ export const experience: Job[] = [
   {
     num: "01",
     company: "Dalil-AI (Pvt) Ltd. · UAE (Remote)",
-    role: "Software Engineer — Full Stack",
-    duration: "Jun 2024 — Present",
+    role: "Software Engineer - Full Stack",
+    duration: "Jun 2024 - Present",
     tags: [
       "LangChain",
       "GPT-4o",
@@ -64,7 +67,7 @@ export const experience: Job[] = [
     bullets: [
       "Architecting a multi-tenant SaaS CRM with modular NestJS services, a GraphQL API layer, and event-driven workflows on Kafka and BullMQ.",
       "Built AI-powered automation using LangChain and OpenAI GPT-4o for trigger-based messaging and LLM-driven response handling.",
-      "Designed a workflow engine for complex automation sequences — configurable triggers, conditions, and multi-channel actions.",
+      "Designed a workflow engine for complex automation sequences configurable triggers, conditions, and multi-channel actions.",
       "Integrated Unipile, WhatsApp, and LinkedIn APIs into a unified inbox and outreach layer.",
       "Implemented SSO (Azure AD & Google) with session management across a distributed Nx monorepo.",
       "Set up Sentry and OpenTelemetry for cross-service observability.",
@@ -73,8 +76,8 @@ export const experience: Job[] = [
   {
     num: "02",
     company: "Onezerro (Pvt) Ltd. · Colombo (On-site)",
-    role: "Associate Software Engineer — Full Stack",
-    duration: "Dec 2023 — Jun 2024",
+    role: "Associate Software Engineer - Full Stack",
+    duration: "Dec 2023 - Jun 2024",
     tags: ["React", "Next.js", "Node.js", "SQL", "AWS", "SwiftUI"],
     bullets: [
       "Integrated Amadeus SOAP APIs for live flight booking and travel services.",
@@ -85,8 +88,8 @@ export const experience: Job[] = [
   {
     num: "03",
     company: "Inova IT Systems (Pvt) Ltd. · Sri Lanka (Remote)",
-    role: "Software Engineering Intern — Full Stack",
-    duration: "2021 — 2022",
+    role: "Software Engineering Intern - Full Stack",
+    duration: "2021 - 2022",
     tags: ["Java", "Spring Boot", "Angular", "SQL"],
     bullets: [
       "Built backend services with Spring Framework and implemented multilingual UI support.",
@@ -102,9 +105,16 @@ export const projects: Project[] = [
     meta: "Dalil-AI · 2024–2026",
     category: "AI / Full-Stack · Production",
     description:
-      "A production multi-tenant SaaS CRM with LangChain/GPT-4o workflows, Kafka event streams, and a unified social inbox spanning LinkedIn and WhatsApp — built on an Nx monorepo with a NestJS + GraphQL backend and a React frontend.",
-    tags: ["NestJS", "GraphQL", "LangChain", "Kafka", "PostgreSQL", "React TSX"],
-    demo: null,
+      "A production multi-tenant SaaS CRM with LangChain/GPT-4o workflows, Kafka event streams, and a unified social inbox spanning LinkedIn and WhatsApp, built on an Nx monorepo with a NestJS + GraphQL backend and a React frontend.",
+    tags: [
+      "NestJS",
+      "GraphQL",
+      "LangChain",
+      "Kafka",
+      "PostgreSQL",
+      "React TSX",
+    ],
+    demo: "https://app.usedalil.ai/welcome",
   },
   {
     num: "02",
@@ -124,7 +134,7 @@ export const projects: Project[] = [
     description:
       "A flight booking platform with Amadeus SOAP API integration, a responsive Next.js UI, and a Node.js REST backend deployed on AWS.",
     tags: ["Next.js", "Node.js", "MySQL", "AWS"],
-    demo: null,
+    demo: "https://www.findyourfares.com/",
   },
   {
     num: "04",
@@ -185,7 +195,15 @@ const skillsRaw: { category: string; items: string[] }[] = [
   },
   {
     category: "Databases & Cloud",
-    items: ["PostgreSQL", "Supabase", "MySQL", "MongoDB", "Redis", "AWS", "Docker"],
+    items: [
+      "PostgreSQL",
+      "Supabase",
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "AWS",
+      "Docker",
+    ],
   },
   {
     category: "DevOps & Observability",
@@ -208,7 +226,7 @@ export const skills: SkillCategory[] = skillsRaw.map((cat, i) => ({
 export const writing: Article[] = [
   {
     title:
-      "Chess Puzzle Difficulty Is Not One Number — It Is a Relationship Between the Puzzle and the Player",
+      "Chess Puzzle Difficulty Is Not One Number, It Is a Relationship Between the Puzzle and the Player",
     venue: "Medium",
     date: "2026",
     summary:
@@ -229,24 +247,28 @@ export const researchTags: string[] = [
 export const moreResearch: ResearchCard[] = [
   {
     slotId: "research-2",
-    status: "Ongoing",
+    status: "Completed",
     title: "Adaptive Difficulty Modeling",
+    src: "src/imgs/chess.png",
+    alt: "Adaptive Difficulty Modeling",
     description:
-      "Extending the ExplainChess model to adapt its difficulty estimate to an individual player's rating history, not just the puzzle itself.",
+    "Building on the ExplainChess framework to estimate puzzle difficulty relative to an individual player's skill level, using rating history and performance patterns to deliver more personalized and accurate difficulty predictions."
   },
   {
     slotId: "research-3",
     status: "Ongoing",
     title: "LLM Workflow Reliability",
+    src: "src/imgs/workflow.png",
     description:
-      "Studying how explanation traces from LangChain-based agent workflows can be used to catch and correct silent failures before they reach a user.",
+    "Investigating methods to improve the reliability of LangChain-based LLM agent workflows by analysing explanation traces, identifying silent reasoning failures, and automatically detecting or correcting errors before responses reach users."
   },
   {
     slotId: "research-4",
-    status: "Early-stage",
+    status: "Completed",
     title: "Explainability for Recommender Systems",
+    src: "src/imgs/purexkin.png",
     description:
-      'Applying SHAP-style feature attribution outside chess — to ranking and recommendation models where "why this?" matters just as much.',
+      "A deep learning–based acne scar classification system that combines ResNet50 and EfficientNetB0 through a stacking ensemble to accurately classify scar types and provide personalised health insights. The model achieved 95% accuracy, highlighting the potential of ensemble learning.",
   },
 ];
 
@@ -266,7 +288,7 @@ export const pipeline = pipelineLabels.map((label, i) => ({
 
 export const stats: Stat[] = [
   { n: "4+", label: "Years of full-stack engineering experience" },
-  { n: "3", label: "Companies — intern to AI systems architecture" },
+  { n: "3", label: "Companies intern to AI systems architecture" },
   { n: "2", label: "AI research projects shipped like products" },
 ];
 
