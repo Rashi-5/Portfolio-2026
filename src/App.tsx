@@ -425,7 +425,7 @@ export default function App() {
                   MSc (Hons) Advanced Software Engineering
                 </h4>
                 <p style={{ margin: 0, fontSize: 13.5, color: muted(62) }}>
-                  IIT / University of Westminster (UK) · 2025–2026 · Reading
+                  IIT / University of Westminster (UK) · 2025–2026 · Pending Results
                 </p>
               </div>
               <div
