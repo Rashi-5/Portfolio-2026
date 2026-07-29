@@ -422,7 +422,7 @@ export default function App() {
                 }}
               >
                 <h4 style={{ margin: "0 0 4px" }}>
-                  MSc (Hons) Advanced Software Engineering
+                  MSc Advanced Software Engineering
                 </h4>
                 <p style={{ margin: 0, fontSize: 13.5, color: muted(62) }}>
                   IIT / University of Westminster (UK) · 2025–2026 · Pending Results
@@ -490,7 +490,7 @@ export default function App() {
                 Off the clock
               </span>
               <p style={{ margin: "8px 0 0", fontSize: 15.5, lineHeight: 1.5 }}>
-                Chess AI research, oil &amp; digital painting.
+                AI research, Small websites, Cratfs, Acrylic &amp; watercolor painting.
               </p>
             </div>
           </div>
