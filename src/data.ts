@@ -295,7 +295,7 @@ export const pipeline = pipelineLabels.map((label, i) => ({
 export const stats: Stat[] = [
   { n: "4+", label: "Years of full-stack engineering experience" },
   { n: "3", label: "Companies intern to AI systems architecture" },
-  { n: "2", label: "AI research projects shipped like products" },
+  { n: "12+", label: "AI research projects shipped like products" },
 ];
 
 const marqueeItems = [
@@ -320,5 +320,6 @@ export const contact = {
   artPortfolioUrl: "#",
   linkedinUrl: "#",
   githubUrl: "#",
-  resumeUrl: "#",
+  // Served from /public, so it lands at the site root.
+  resumeUrl: "/resume.pdf",
 };
