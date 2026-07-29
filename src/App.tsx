@@ -382,16 +382,18 @@ export default function App() {
                   color: "var(--color-accent-700)",
                   float: "left",
                   lineHeight: 0.8,
-                  margin: "0 8px 0 0",
+                  margin: "0 4px 0 0",
                 }}
               >
                 S
               </span>
               oftware Engineer with 4+ years across full-stack product
-              engineering and applied AI. I care about systems that are not just
-              intelligent but legible - where a model's decision, a workflow's
-              trigger, or a puzzle's difficulty can be explained to the person
-              relying on it, not just predicted.
+              engineering and applied AI. I'm driven by curiosity, someone who
+              enjoys exploring ideas, solving complex problems, and turning them
+              into meaningful experiences. My work sits at the intersection of
+              engineering, artificial intelligence, and creativity, where I
+              build, experiment, and constantly look for better ways to
+              understand the world around me.
             </p>
             <p
               style={{
@@ -402,10 +404,9 @@ export default function App() {
                 marginTop: 18,
               }}
             >
-              Outside of shipped code, I research chess as a testbed for
-              explainable AI, and I paint - two habits that feed the same
-              instinct: finding the structure underneath something that looks
-              intuitive.
+              Whether I am designing software, researching intelligent systems,
+              or painting, I am drawn to the same process: observing,
+              experimenting, and creating something that did not exist before.
             </p>
             <div
               style={{
@@ -425,7 +426,8 @@ export default function App() {
                   MSc Advanced Software Engineering
                 </h4>
                 <p style={{ margin: 0, fontSize: 13.5, color: muted(62) }}>
-                  IIT / University of Westminster (UK) · 2025–2026 · Pending Results
+                  IIT / University of Westminster (UK) · 2025–2026 · Pending
+                  Results
                 </p>
               </div>
               <div
@@ -490,7 +492,8 @@ export default function App() {
                 Off the clock
               </span>
               <p style={{ margin: "8px 0 0", fontSize: 15.5, lineHeight: 1.5 }}>
-                AI research, Small websites, Cratfs, Acrylic &amp; watercolor painting.
+                AI research, Small websites, Cratfs, Acrylic &amp; watercolor
+                painting.
               </p>
             </div>
           </div>
@@ -699,10 +702,7 @@ export default function App() {
               alignItems: "center",
             }}
           >
-            <div
-              className="plate"
-              style={{ borderRadius: 2 }}
-            >
+            <div className="plate" style={{ borderRadius: 2 }}>
               <ImageSlot
                 src={explainChessImg}
                 alt="ExplainChess analysis UI"
@@ -1110,7 +1110,7 @@ export default function App() {
             }}
           >
             Off the clock, I paint acrylic work on its own gallery site.
-          </span> */}
+          </span> 
           <span
             style={{
               fontFamily: mono,
@@ -1124,6 +1124,7 @@ export default function App() {
           >
             View art portfolio →
           </span>
+          */}
         </a>
       </div>
 
