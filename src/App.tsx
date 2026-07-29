@@ -382,7 +382,7 @@ export default function App() {
                   color: "var(--color-accent-700)",
                   float: "left",
                   lineHeight: 0.8,
-                  margin: "0 8px 0 0",
+                  margin: "0 4px 0 0",
                 }}
               >
                 S
