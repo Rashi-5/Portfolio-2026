@@ -320,5 +320,6 @@ export const contact = {
   artPortfolioUrl: "#",
   linkedinUrl: "#",
   githubUrl: "#",
-  resumeUrl: "#",
+  // Served from /public, so it lands at the site root.
+  resumeUrl: "/resume.pdf",
 };

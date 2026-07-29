@@ -1193,7 +1193,7 @@ export default function App() {
             </a>
             <a
               href={contact.resumeUrl}
-              title="Add resume PDF"
+              download="Rashmi-Liyanawadu-Resume.pdf"
               style={{
                 textDecoration: "none",
                 fontFamily: mono,
