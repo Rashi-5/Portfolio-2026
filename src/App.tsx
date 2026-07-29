@@ -1100,7 +1100,7 @@ export default function App() {
             margin: "0 auto",
           }}
         >
-          <span
+          {/* <span
             style={{
               fontFamily: "var(--font-heading)",
               fontWeight: "var(--font-heading-weight)" as unknown as number,
@@ -1110,7 +1110,7 @@ export default function App() {
             }}
           >
             Off the clock, I paint acrylic work on its own gallery site.
-          </span>
+          </span> */}
           <span
             style={{
               fontFamily: mono,
