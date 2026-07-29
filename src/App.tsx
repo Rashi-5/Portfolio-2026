@@ -1,6 +1,8 @@
 import { useReveal, useScroll } from "./hooks";
 import { SectionBand } from "./components/SectionBand";
 import { ImageSlot } from "./components/ImageSlot";
+import { PawField } from "./components/PawField";
+import explainChessImg from "./imgs/explainChess.png";
 import {
   contact,
   experience,
@@ -170,7 +172,13 @@ export default function App() {
                 marginBottom: 26,
               }}
             >
-              <span style={{ width: 26, height: 1.5, background: "var(--color-accent)" }} />
+              <span
+                style={{
+                  width: 26,
+                  height: 1.5,
+                  background: "var(--color-accent)",
+                }}
+              />
               Software Engineer · AI Researcher
             </span>
             <h1
@@ -183,7 +191,7 @@ export default function App() {
                 letterSpacing: "-0.02em",
               }}
             >
-              <span style={{ display: "block" }}>Systems that</span>
+              <span style={{ display: "block" }}>Turning</span>
               <span
                 style={{
                   display: "block",
@@ -191,9 +199,9 @@ export default function App() {
                   WebkitTextStroke: "1.5px var(--color-accent)",
                 }}
               >
-                explain
+                Curiosity
               </span>
-              <span style={{ display: "block" }}>themselves.</span>
+              <span style={{ display: "block" }}>Into Creation.</span>
             </h1>
             <p
               style={{
@@ -204,10 +212,18 @@ export default function App() {
                 margin: "30px 0 34px",
               }}
             >
-              Full-stack engineer building AI-powered SaaS at <strong>Dalil-AI</strong>, and
-              an MSc researcher making chess AI explain its own reasoning.
+              Full-stack engineer building AI-powered SaaS at{" "}
+              <strong>Dalil-AI</strong>, and an MSc researcher making chess AI
+              explain its own reasoning.
             </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginBottom: 38 }}>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 14,
+                marginBottom: 38,
+              }}
+            >
               <a
                 href="#projects"
                 style={{
@@ -266,26 +282,12 @@ export default function App() {
           >
             <div
               style={{
-                position: "absolute",
-                inset: "-14px -14px auto auto",
-                width: "100%",
-                height: "100%",
-                border: "var(--line-w) solid var(--color-accent-2)",
-                borderRadius: 2,
-                zIndex: 0,
-              }}
-            />
-            <div
-              className="plate"
-              style={{
                 position: "relative",
-                zIndex: 1,
                 width: "100%",
                 aspectRatio: "4 / 5",
-                borderRadius: 2,
               }}
             >
-              <ImageSlot placeholder="Drop a professional portrait" />
+              <PawField />
             </div>
           </div>
         </div>
@@ -364,7 +366,14 @@ export default function App() {
             >
               Building software that explains itself.
             </h2>
-            <p style={{ fontSize: 17.5, lineHeight: 1.7, color: muted(82), maxWidth: "60ch" }}>
+            <p
+              style={{
+                fontSize: 17.5,
+                lineHeight: 1.7,
+                color: muted(82),
+                maxWidth: "60ch",
+              }}
+            >
               <span
                 style={{
                   fontFamily: "var(--font-heading)",
@@ -378,10 +387,11 @@ export default function App() {
               >
                 S
               </span>
-              oftware Engineer with 4+ years across full-stack product engineering and applied
-              AI. I care about systems that are not just intelligent but legible — where a
-              model's decision, a workflow's trigger, or a puzzle's difficulty can be explained
-              to the person relying on it, not just predicted.
+              oftware Engineer with 4+ years across full-stack product
+              engineering and applied AI. I care about systems that are not just
+              intelligent but legible - where a model's decision, a workflow's
+              trigger, or a puzzle's difficulty can be explained to the person
+              relying on it, not just predicted.
             </p>
             <p
               style={{
@@ -392,12 +402,25 @@ export default function App() {
                 marginTop: 18,
               }}
             >
-              Outside of shipped code, I research chess as a testbed for explainable AI, and I
-              paint — two habits that feed the same instinct: finding the structure underneath
-              something that looks intuitive.
+              Outside of shipped code, I research chess as a testbed for
+              explainable AI, and I paint - two habits that feed the same
+              instinct: finding the structure underneath something that looks
+              intuitive.
             </p>
-            <div style={{ display: "flex", marginTop: 36, flexWrap: "wrap", gap: 36 }}>
-              <div style={{ borderLeft: "var(--line-w) solid var(--color-accent)", paddingLeft: 16 }}>
+            <div
+              style={{
+                display: "flex",
+                marginTop: 36,
+                flexWrap: "wrap",
+                gap: 36,
+              }}
+            >
+              <div
+                style={{
+                  borderLeft: "var(--line-w) solid var(--color-accent)",
+                  paddingLeft: 16,
+                }}
+              >
                 <h4 style={{ margin: "0 0 4px" }}>
                   MSc (Hons) Advanced Software Engineering
                 </h4>
@@ -405,17 +428,31 @@ export default function App() {
                   IIT / University of Westminster (UK) · 2025–2026 · Reading
                 </p>
               </div>
-              <div style={{ borderLeft: "var(--line-w) solid var(--color-accent-2)", paddingLeft: 16 }}>
-                <h4 style={{ margin: "0 0 4px" }}>BEng (Hons) Software Engineering</h4>
+              <div
+                style={{
+                  borderLeft: "var(--line-w) solid var(--color-accent-2)",
+                  paddingLeft: 16,
+                }}
+              >
+                <h4 style={{ margin: "0 0 4px" }}>
+                  BEng (Hons) Software Engineering
+                </h4>
                 <p style={{ margin: 0, fontSize: 13.5, color: muted(62) }}>
-                  IIT / University of Westminster (UK) · 2019–2023 · First Class Honours
+                  IIT / University of Westminster (UK) · 2019–2023 · First Class
+                  Honours
                 </p>
               </div>
             </div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
             {stats.map((st, i) => (
-              <div key={i} style={{ padding: "26px 0", borderTop: "1.5px solid var(--color-divider)" }}>
+              <div
+                key={i}
+                style={{
+                  padding: "26px 0",
+                  borderTop: "1.5px solid var(--color-divider)",
+                }}
+              >
                 <span
                   style={{
                     display: "block",
@@ -429,7 +466,9 @@ export default function App() {
                 >
                   {st.n}
                 </span>
-                <span style={{ fontSize: 14.5, color: muted(70) }}>{st.label}</span>
+                <span style={{ fontSize: 14.5, color: muted(70) }}>
+                  {st.label}
+                </span>
               </div>
             ))}
             <div
@@ -468,9 +507,20 @@ export default function App() {
       />
       <section
         id="experience"
-        style={{ maxWidth: 1320, margin: "0 auto", padding: "76px clamp(20px,5vw,72px)", ...exp.style }}
+        style={{
+          maxWidth: 1320,
+          margin: "0 auto",
+          padding: "76px clamp(20px,5vw,72px)",
+          ...exp.style,
+        }}
       >
-        <h2 style={{ fontSize: "clamp(30px,3.6vw,46px)", margin: "0 0 52px", maxWidth: "22ch" }}>
+        <h2
+          style={{
+            fontSize: "clamp(30px,3.6vw,46px)",
+            margin: "0 0 52px",
+            maxWidth: "22ch",
+          }}
+        >
           Four years, intern to AI systems architecture.
         </h2>
         <div>
@@ -490,7 +540,8 @@ export default function App() {
                   fontFamily: "var(--font-heading)",
                   fontWeight: 800,
                   fontSize: 44,
-                  color: "color-mix(in srgb, var(--color-accent) 22%, transparent)",
+                  color:
+                    "color-mix(in srgb, var(--color-accent) 22%, transparent)",
                   lineHeight: 1,
                   fontVariantNumeric: "tabular-nums",
                 }}
@@ -512,7 +563,13 @@ export default function App() {
                   {job.duration}
                 </span>
                 <h3 style={{ margin: "0 0 2px", fontSize: 24 }}>{job.role}</h3>
-                <p style={{ margin: "0 0 16px", fontSize: 14.5, color: muted(65) }}>
+                <p
+                  style={{
+                    margin: "0 0 16px",
+                    fontSize: 14.5,
+                    color: muted(65),
+                  }}
+                >
                   {job.company}
                 </p>
                 <ul
@@ -526,7 +583,14 @@ export default function App() {
                   }}
                 >
                   {job.bullets.map((b, i) => (
-                    <li key={i} style={{ fontSize: 15, lineHeight: 1.6, color: muted(80) }}>
+                    <li
+                      key={i}
+                      style={{
+                        fontSize: 15,
+                        lineHeight: 1.6,
+                        color: muted(80),
+                      }}
+                    >
                       {b}
                     </li>
                   ))}
@@ -552,12 +616,30 @@ export default function App() {
         bandRef={research.ref as React.Ref<HTMLDivElement>}
         revealStyle={research.style}
       />
-      <section id="research" style={{ background: "var(--color-surface)", ...research.style }}>
-        <div style={{ maxWidth: 1320, margin: "0 auto", padding: "76px clamp(20px,5vw,72px)" }}>
-          <h2 style={{ fontSize: "clamp(38px,5vw,64px)", margin: "0 0 12px" }}>ExplainChess</h2>
-          <p style={{ fontSize: 18.5, color: muted(70), maxWidth: "62ch", margin: "0 0 48px" }}>
-            Explainable AI for chess puzzle difficulty prediction — an MSc research project
-            built and shipped like a product.
+      <section
+        id="research"
+        style={{ background: "var(--color-surface)", ...research.style }}
+      >
+        <div
+          style={{
+            maxWidth: 1320,
+            margin: "0 auto",
+            padding: "76px clamp(20px,5vw,72px)",
+          }}
+        >
+          <h2 style={{ fontSize: "clamp(38px,5vw,64px)", margin: "0 0 12px" }}>
+            ExplainChess
+          </h2>
+          <p
+            style={{
+              fontSize: 18.5,
+              color: muted(70),
+              maxWidth: "62ch",
+              margin: "0 0 48px",
+            }}
+          >
+            Explainable AI for chess puzzle difficulty prediction - an MSc
+            research project built and shipped like a product.
           </p>
 
           <div
@@ -568,20 +650,43 @@ export default function App() {
               marginBottom: 52,
             }}
           >
-            <div style={{ borderTop: "var(--line-w) solid var(--color-accent)", paddingTop: 16 }}>
-              <h4 style={{ color: "var(--color-accent-700)", margin: "0 0 8px" }}>Problem</h4>
+            <div
+              style={{
+                borderTop: "var(--line-w) solid var(--color-accent)",
+                paddingTop: 16,
+              }}
+            >
+              <h4
+                style={{ color: "var(--color-accent-700)", margin: "0 0 8px" }}
+              >
+                Problem
+              </h4>
               <p style={{ fontSize: 15.5, lineHeight: 1.65, color: muted(80) }}>
-                Chess puzzle ratings do not always represent how difficult a puzzle is for a
-                human to solve — a rating is a population statistic, not a description of what
-                makes one position harder to read than another.
+                Chess puzzle ratings do not always represent how difficult a
+                puzzle is for a human to solve, a rating is a population
+                statistic, not a description of what makes one position harder
+                to read than another.
               </p>
             </div>
-            <div style={{ borderTop: "var(--line-w) solid var(--color-accent-2)", paddingTop: 16 }}>
-              <h4 style={{ color: "var(--color-accent-2-700)", margin: "0 0 8px" }}>Solution</h4>
+            <div
+              style={{
+                borderTop: "var(--line-w) solid var(--color-accent-2)",
+                paddingTop: 16,
+              }}
+            >
+              <h4
+                style={{
+                  color: "var(--color-accent-2-700)",
+                  margin: "0 0 8px",
+                }}
+              >
+                Solution
+              </h4>
               <p style={{ fontSize: 15.5, lineHeight: 1.65, color: muted(80) }}>
-                A model that predicts human solve difficulty directly from chess position
-                features, paired with SHAP-based explanations that surface which features drove
-                each prediction — in plain language, not just a score.
+                A model that predicts human solve difficulty directly from chess
+                position features, paired with SHAP-based explanations that
+                surface which features drove each prediction in plain language,
+                not just a score.
               </p>
             </div>
           </div>
@@ -594,8 +699,15 @@ export default function App() {
               alignItems: "center",
             }}
           >
-            <div className="plate" style={{ width: "100%", aspectRatio: "16 / 10", borderRadius: 2 }}>
-              <ImageSlot placeholder="Drop an ExplainChess UI screenshot" />
+            <div
+              className="plate"
+              style={{ borderRadius: 2 }}
+            >
+              <ImageSlot
+                src={explainChessImg}
+                alt="ExplainChess analysis UI"
+                placeholder="Drop an ExplainChess UI screenshot"
+              />
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               <a
@@ -618,7 +730,7 @@ export default function App() {
                 Try the live demo
               </a>
               <a
-                href="https://medium.com/@rashmi.20241660/chess-puzzle-difficulty-is-not-one-number-it-is-a-relationship-between-the-puzzle-and-the-player-adfa16363ee7"
+                href="https://medium.com/@rashmi.20241660/chess-puzzle-difficulty-is-not-one-number-it-is-a-relationship-between-the-puzzle-and-the-player-adfa16363ee7?sharedUserId=rashmi.20241660"
                 target="_blank"
                 rel="noopener"
                 style={{
@@ -666,15 +778,29 @@ export default function App() {
               }}
             >
               {moreResearch.map((r) => (
-                <div key={r.slotId} className="card elev-sm" style={{ padding: 0, overflow: "hidden", gap: 0 }}>
-                  <div className="plate" style={{ width: "100%", aspectRatio: "16 / 10", borderRadius: 0 }}>
-                    <ImageSlot placeholder="Drop a research screenshot" />
+                <div
+                  key={r.slotId}
+                  className="card elev-sm"
+                  style={{ padding: 0, overflow: "hidden", gap: 0 }}
+                >
+                  <div className="plate" style={{ borderRadius: 0 }}>
+                    <ImageSlot
+                      src={r.src}
+                      alt={r.alt ?? r.title}
+                      placeholder="Drop a research screenshot"
+                    />
                   </div>
                   <div style={{ padding: 20 }}>
-                    <span className="tag tag-outline" style={{ marginBottom: 10, display: "inline-block" }}>
+                    <span
+                      className="tag tag-outline"
+                      style={{ marginBottom: 10, display: "inline-block" }}
+                    >
                       {r.status}
                     </span>
-                    <p className="card-title" style={{ fontSize: 17, margin: "0 0 6px" }}>
+                    <p
+                      className="card-title"
+                      style={{ fontSize: 17, margin: "0 0 6px" }}
+                    >
                       {r.title}
                     </p>
                     <p className="card-body" style={{ fontSize: 14 }}>
@@ -698,9 +824,20 @@ export default function App() {
       />
       <section
         id="projects"
-        style={{ maxWidth: 1320, margin: "0 auto", padding: "76px clamp(20px,5vw,72px)", ...projectsR.style }}
+        style={{
+          maxWidth: 1320,
+          margin: "0 auto",
+          padding: "76px clamp(20px,5vw,72px)",
+          ...projectsR.style,
+        }}
       >
-        <h2 style={{ fontSize: "clamp(30px,3.6vw,46px)", margin: "0 0 52px", maxWidth: "24ch" }}>
+        <h2
+          style={{
+            fontSize: "clamp(30px,3.6vw,46px)",
+            margin: "0 0 52px",
+            maxWidth: "24ch",
+          }}
+        >
           AI/ML, full-stack, and research work.
         </h2>
         {projects.map((p) => (
@@ -720,7 +857,8 @@ export default function App() {
                 fontFamily: "var(--font-heading)",
                 fontWeight: 800,
                 fontSize: 52,
-                color: "color-mix(in srgb, var(--color-accent-2) 20%, transparent)",
+                color:
+                  "color-mix(in srgb, var(--color-accent-2) 20%, transparent)",
                 lineHeight: 1,
                 fontVariantNumeric: "tabular-nums",
               }}
@@ -739,7 +877,11 @@ export default function App() {
                 }}
               >
                 <h3 style={{ margin: 0, fontSize: 24 }}>{p.title}</h3>
-                <span style={{ fontSize: 12.5, color: muted(55), fontFamily: mono }}>{p.meta}</span>
+                <span
+                  style={{ fontSize: 12.5, color: muted(55), fontFamily: mono }}
+                >
+                  {p.meta}
+                </span>
               </div>
               <p
                 style={{
@@ -752,7 +894,14 @@ export default function App() {
               >
                 {p.description}
               </p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10 }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: 6,
+                  marginBottom: 10,
+                }}
+              >
                 {p.tags.map((t) => (
                   <span key={t} className="tag tag-neutral">
                     {t}
@@ -790,9 +939,20 @@ export default function App() {
       />
       <section
         id="skills"
-        style={{ maxWidth: 1320, margin: "0 auto", padding: "76px clamp(20px,5vw,72px)", ...skillsR.style }}
+        style={{
+          maxWidth: 1320,
+          margin: "0 auto",
+          padding: "76px clamp(20px,5vw,72px)",
+          ...skillsR.style,
+        }}
       >
-        <h2 style={{ fontSize: "clamp(30px,3.6vw,46px)", margin: "0 0 52px", maxWidth: "20ch" }}>
+        <h2
+          style={{
+            fontSize: "clamp(30px,3.6vw,46px)",
+            margin: "0 0 52px",
+            maxWidth: "20ch",
+          }}
+        >
           A full-stack toolkit for AI product work.
         </h2>
         <div
@@ -803,8 +963,16 @@ export default function App() {
           }}
         >
           {skills.map((cat) => (
-            <div key={cat.category} style={{ borderTop: "1.5px solid var(--color-divider)", paddingTop: 16 }}>
-              <h4 style={{ margin: "0 0 14px", fontSize: 16 }}>{cat.category}</h4>
+            <div
+              key={cat.category}
+              style={{
+                borderTop: "1.5px solid var(--color-divider)",
+                paddingTop: 16,
+              }}
+            >
+              <h4 style={{ margin: "0 0 14px", fontSize: 16 }}>
+                {cat.category}
+              </h4>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
                 {cat.items.map((s) => (
                   <span key={s.name} className={`tag ${s.cls}`}>
@@ -825,9 +993,24 @@ export default function App() {
         bandRef={writingR.ref as React.Ref<HTMLDivElement>}
         revealStyle={writingR.style}
       />
-      <section id="writing" style={{ background: "var(--color-surface)", ...writingR.style }}>
-        <div style={{ maxWidth: 1320, margin: "0 auto", padding: "76px clamp(20px,5vw,72px)" }}>
-          <h2 style={{ fontSize: "clamp(30px,3.6vw,46px)", margin: "0 0 44px", maxWidth: "22ch" }}>
+      <section
+        id="writing"
+        style={{ background: "var(--color-surface)", ...writingR.style }}
+      >
+        <div
+          style={{
+            maxWidth: 1320,
+            margin: "0 auto",
+            padding: "76px clamp(20px,5vw,72px)",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "clamp(30px,3.6vw,46px)",
+              margin: "0 0 44px",
+              maxWidth: "22ch",
+            }}
+          >
             Notes from the research side of the work.
           </h2>
           {writing.map((w) => (
@@ -857,10 +1040,23 @@ export default function App() {
               >
                 {w.venue} · {w.date}
               </span>
-              <h3 style={{ margin: "14px 0 14px", fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.28 }}>
+              <h3
+                style={{
+                  margin: "14px 0 14px",
+                  fontSize: "clamp(22px,2.6vw,30px)",
+                  lineHeight: 1.28,
+                }}
+              >
                 {w.title}
               </h3>
-              <p style={{ margin: "0 0 18px", fontSize: 16, lineHeight: 1.6, color: muted(78) }}>
+              <p
+                style={{
+                  margin: "0 0 18px",
+                  fontSize: 16,
+                  lineHeight: 1.6,
+                  color: muted(78),
+                }}
+              >
                 {w.summary}
               </p>
               <span
@@ -935,9 +1131,19 @@ export default function App() {
       <section
         id="contact"
         ref={contactR.ref as React.Ref<HTMLElement>}
-        style={{ background: "var(--color-neutral-900)", color: "var(--color-neutral-100)", ...contactR.style }}
+        style={{
+          background: "var(--color-neutral-900)",
+          color: "var(--color-neutral-100)",
+          ...contactR.style,
+        }}
       >
-        <div style={{ maxWidth: 1320, margin: "0 auto", padding: "clamp(64px,10vw,120px) clamp(20px,5vw,72px) 72px" }}>
+        <div
+          style={{
+            maxWidth: 1320,
+            margin: "0 auto",
+            padding: "clamp(64px,10vw,120px) clamp(20px,5vw,72px) 72px",
+          }}
+        >
           <h2
             style={{
               fontSize: "clamp(38px,6vw,80px)",
@@ -953,13 +1159,22 @@ export default function App() {
               fontSize: 17.5,
               lineHeight: 1.6,
               maxWidth: "52ch",
-              color: "color-mix(in srgb, var(--color-neutral-100) 78%, transparent)",
+              color:
+                "color-mix(in srgb, var(--color-neutral-100) 78%, transparent)",
               margin: "0 0 40px",
             }}
           >
-            Open to software engineering, AI engineering, and research opportunities.
+            Open to software engineering, AI engineering, and research
+            opportunities.
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginBottom: 56 }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 14,
+              marginBottom: 56,
+            }}
+          >
             <a
               href={`mailto:${contact.email}`}
               style={{
@@ -985,7 +1200,8 @@ export default function App() {
                 fontSize: 13,
                 letterSpacing: "0.04em",
                 textTransform: "uppercase",
-                border: "1.5px solid color-mix(in srgb, var(--color-neutral-100) 30%, transparent)",
+                border:
+                  "1.5px solid color-mix(in srgb, var(--color-neutral-100) 30%, transparent)",
                 color: "var(--color-neutral-100)",
                 padding: "15px 28px",
                 borderRadius: 2,
@@ -1000,18 +1216,29 @@ export default function App() {
               flexWrap: "wrap",
               gap: 32,
               fontSize: 14.5,
-              color: "color-mix(in srgb, var(--color-neutral-100) 65%, transparent)",
-              borderTop: "1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent)",
+              color:
+                "color-mix(in srgb, var(--color-neutral-100) 65%, transparent)",
+              borderTop:
+                "1px solid color-mix(in srgb, var(--color-neutral-100) 18%, transparent)",
               paddingTop: 28,
             }}
           >
-            <a href={`mailto:${contact.email}`} style={{ color: "inherit", textDecoration: "none" }}>
+            <a
+              href={`mailto:${contact.email}`}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
               {contact.email}
             </a>
-            <a href={contact.linkedinUrl} style={{ color: "inherit", textDecoration: "none" }}>
+            <a
+              href={contact.linkedinUrl}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
               LinkedIn →
             </a>
-            <a href={contact.githubUrl} style={{ color: "inherit", textDecoration: "none" }}>
+            <a
+              href={contact.githubUrl}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
               GitHub →
             </a>
             <span>
@@ -1025,7 +1252,8 @@ export default function App() {
             margin: "0 auto",
             padding: "0 clamp(20px,5vw,72px) 32px",
             fontSize: 12.5,
-            color: "color-mix(in srgb, var(--color-neutral-100) 45%, transparent)",
+            color:
+              "color-mix(in srgb, var(--color-neutral-100) 45%, transparent)",
             display: "flex",
             justifyContent: "space-between",
             flexWrap: "wrap",
