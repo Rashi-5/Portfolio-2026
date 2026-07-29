@@ -2,6 +2,7 @@ import { useReveal, useScroll } from "./hooks";
 import { SectionBand } from "./components/SectionBand";
 import { ImageSlot } from "./components/ImageSlot";
 import { PawField } from "./components/PawField";
+import explainChessImg from "./imgs/explainChess.png";
 import {
   contact,
   experience,
@@ -703,7 +704,7 @@ export default function App() {
               style={{ borderRadius: 2 }}
             >
               <ImageSlot
-                src="src/imgs/explainChess.png"
+                src={explainChessImg}
                 alt="ExplainChess analysis UI"
                 placeholder="Drop an ExplainChess UI screenshot"
               />

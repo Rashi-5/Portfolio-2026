@@ -1,3 +1,9 @@
+// Imported so Vite fingerprints these and emits them into the build output.
+// A raw "src/imgs/…" string would 404 in production.
+import chessImg from "./imgs/chess.png";
+import workflowImg from "./imgs/workflow.jpg";
+import purexkinImg from "./imgs/purexkin.jpg";
+
 export interface Job {
   num: string;
   company: string;
@@ -249,7 +255,7 @@ export const moreResearch: ResearchCard[] = [
     slotId: "research-2",
     status: "Completed",
     title: "Adaptive Difficulty Modeling",
-    src: "src/imgs/chess.png",
+    src: chessImg,
     alt: "Adaptive Difficulty Modeling",
     description:
     "Building on the ExplainChess framework to estimate puzzle difficulty relative to an individual player's skill level, using rating history and performance patterns to deliver more personalized and accurate difficulty predictions."
@@ -258,7 +264,7 @@ export const moreResearch: ResearchCard[] = [
     slotId: "research-3",
     status: "Ongoing",
     title: "LLM Workflow Reliability",
-    src: "src/imgs/workflow.png",
+    src: workflowImg,
     description:
     "Investigating methods to improve the reliability of LangChain-based LLM agent workflows by analysing explanation traces, identifying silent reasoning failures, and automatically detecting or correcting errors before responses reach users."
   },
@@ -266,7 +272,7 @@ export const moreResearch: ResearchCard[] = [
     slotId: "research-4",
     status: "Completed",
     title: "Explainability for Recommender Systems",
-    src: "src/imgs/purexkin.png",
+    src: purexkinImg,
     description:
       "A deep learning–based acne scar classification system that combines ResNet50 and EfficientNetB0 through a stacking ensemble to accurately classify scar types and provide personalised health insights. The model achieved 95% accuracy, highlighting the potential of ensemble learning.",
   },
