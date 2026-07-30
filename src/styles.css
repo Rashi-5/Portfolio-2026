@@ -36,7 +36,7 @@
   --color-accent-2-800: #331a5c;
   --color-accent-2-900: #1f0f38;
 
-  --font-heading: "Cormorant Garamond", system-ui, serif;
+  --font-heading: system-ui, serif;
   --font-heading-weight: 600;
   --font-body: "Lora", system-ui, serif;
 
@@ -153,9 +153,10 @@ img {
   border: 1px solid var(--color-divider);
 }
 .card-kicker {
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-family: "Archivo", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   color: var(--color-accent);
 }
 .card-title {
@@ -217,7 +218,6 @@ img {
   display: block;
   line-height: 0;
   opacity: 0;
-  /* Each paw's peak opacity and timing are set inline, per instance. */
   animation-name: pawBlink;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -256,8 +256,9 @@ img {
   height: 100%;
   background: var(--color-neutral-200);
   color: color-mix(in srgb, var(--color-text) 45%, transparent);
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Archivo", system-ui, sans-serif;
   font-size: 12px;
+  letter-spacing: 0.02em;
   text-align: center;
   padding: 8px;
   overflow: hidden;

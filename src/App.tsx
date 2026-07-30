@@ -14,7 +14,7 @@ import {
   writing,
 } from "./data";
 
-const mono = "'JetBrains Mono',monospace";
+const mono = '"Archivo", system-ui, sans-serif';
 const muted = (pct: number) =>
   `color-mix(in srgb, var(--color-text) ${pct}%, transparent)`;
 
@@ -98,7 +98,7 @@ export default function App() {
             textTransform: "uppercase",
             border: "1.5px solid var(--color-accent)",
             padding: "9px 18px",
-            borderRadius: 2,
+            borderRadius: 12,
             color: "var(--color-accent-700)",
           }}
         >
@@ -172,13 +172,6 @@ export default function App() {
                 marginBottom: 26,
               }}
             >
-              <span
-                style={{
-                  width: 26,
-                  height: 1.5,
-                  background: "var(--color-accent)",
-                }}
-              />
               Software Engineer · AI Researcher
             </span>
             <h1
@@ -235,7 +228,7 @@ export default function App() {
                   border: "1.5px solid var(--color-accent)",
                   color: "var(--color-accent-700)",
                   padding: "14px 26px",
-                  borderRadius: 2,
+                  borderRadius: 12,
                 }}
               >
                 View Projects
@@ -251,7 +244,7 @@ export default function App() {
                   border: "1.5px solid var(--color-divider)",
                   color: "var(--color-text)",
                   padding: "14px 26px",
-                  borderRadius: 2,
+                  borderRadius: 12,
                 }}
               >
                 Contact Me
@@ -267,9 +260,6 @@ export default function App() {
                 color: muted(60),
               }}
             >
-              <span>{contact.location}</span>
-              <span>{contact.timezone}</span>
-              <span>{contact.email}</span>
             </div>
           </div>
           <div
@@ -315,15 +305,41 @@ export default function App() {
               <span
                 key={i}
                 style={{
-                  fontFamily: mono,
-                  fontSize: 14,
-                  letterSpacing: "0.03em",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 12,
                   padding: "0 22px",
-                  color: muted(70),
                   whiteSpace: "nowrap",
                 }}
               >
-                {m} <span style={{ color: "var(--color-accent)" }}>✦</span>
+                <span
+                  style={{
+                    fontFamily: mono,
+                    fontSize: 13,
+                    color: muted(70),
+                    border: "1.5px solid var(--color-divider)",
+                    borderRadius: 12,
+                    padding: "6px 16px",
+                  }}
+                >
+                  {m}
+                </span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                  style={{ flexShrink: 0 }}
+                >
+                  <g fill="var(--color-accent)">
+                    <circle cx="12" cy="6.5" r="3.4" />
+                    <circle cx="17.5" cy="12" r="3.4" />
+                    <circle cx="12" cy="17.5" r="3.4" />
+                    <circle cx="6.5" cy="12" r="3.4" />
+                  </g>
+                  <circle cx="12" cy="12" r="2.4" fill="var(--color-accent-2)" />
+                </svg>
               </span>
             ))}
           </div>
@@ -724,7 +740,7 @@ export default function App() {
                   border: "1.5px solid var(--color-accent)",
                   color: "var(--color-accent-700)",
                   padding: "14px 22px",
-                  borderRadius: 2,
+                  borderRadius: 12,
                 }}
               >
                 Try the live demo
@@ -743,7 +759,7 @@ export default function App() {
                   border: "1.5px solid var(--color-divider)",
                   color: "var(--color-text)",
                   padding: "14px 22px",
-                  borderRadius: 2,
+                  borderRadius: 12,
                 }}
               >
                 Read the writeup
@@ -1024,7 +1040,7 @@ export default function App() {
                 textDecoration: "none",
                 color: "inherit",
                 border: "1.5px solid var(--color-divider)",
-                borderRadius: 2,
+                borderRadius: 12,
                 padding: "clamp(28px,4vw,48px)",
                 maxWidth: 820,
               }}
@@ -1187,7 +1203,7 @@ export default function App() {
                 border: "1.5px solid var(--color-accent-300)",
                 color: "var(--color-accent-100)",
                 padding: "15px 28px",
-                borderRadius: 2,
+                borderRadius: 12,
               }}
             >
               Email me
@@ -1205,7 +1221,7 @@ export default function App() {
                   "1.5px solid color-mix(in srgb, var(--color-neutral-100) 30%, transparent)",
                 color: "var(--color-neutral-100)",
                 padding: "15px 28px",
-                borderRadius: 2,
+                borderRadius: 12,
               }}
             >
               Download Resume

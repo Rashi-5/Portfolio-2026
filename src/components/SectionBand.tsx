@@ -53,10 +53,26 @@ export function SectionBand({
           gap: 18,
         }}
       >
-        <span style={{ width: 34, height: 1.5, background: `var(${accentVar})` }} />
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+          style={{ flexShrink: 0 }}
+        >
+          <g fill="var(--color-accent)">
+            <circle cx="12" cy="6.5" r="3.4" />
+            <circle cx="17.5" cy="12" r="3.4" />
+            <circle cx="12" cy="17.5" r="3.4" />
+            <circle cx="6.5" cy="12" r="3.4" />
+          </g>
+          <circle cx="12" cy="12" r="2.4" fill="var(--color-accent-2)" />
+        </svg>
         <span
           style={{
-            fontFamily: "'JetBrains Mono',monospace",
+            fontFamily: "'Archivo', system-ui, sans-serif",
+            fontWeight: 600,
             fontSize: 13,
             letterSpacing: "0.12em",
             textTransform: "uppercase",

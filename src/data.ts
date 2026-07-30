@@ -298,7 +298,7 @@ export const stats: Stat[] = [
   { n: "12+", label: "AI research projects shipped like products" },
 ];
 
-const marqueeItems = [
+export const marqueeItems = [
   "LangChain",
   "GPT-4o",
   "NestJS",
